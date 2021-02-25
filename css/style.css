@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --gem-tier-4: #9700d5;
+  --neutral-10: #f1f1f1;
+  --font-site: "Roboto", sans-serif;
+}
+
+/*general style */
+
+body {
+  font-family: var(--font-site);
+  font-size: 17px;
+  background-color: var(--neutral-10);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  height: 100vh;
+}
+
+.myBtn {
+  border: 0;
+  background-color: var(--gem-tier-4);
+}
+
+.myBtn:hover {
+  border: 0;
+  background-color: var(--gem-tier-4);
+  opacity: 0.8;
+}
+
+.title-Section {
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.center-line {
+  width: 10%;
+  height: 3px;
+  background-color: var(--gem-tier-4);
+  margin: 0 auto 2rem auto;
+}
+/*Start the Header */
+
+.logo {
+  width: 2rem;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Start  of navbar */
+.nav-item a:after {
+  content: "";
+  display: block;
+  margin-top: 0.2rem;
+  left: 0;
+  bottom: 0px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--gem-tier-4);
+  transition: all 0.5s ease-in-out;
+}
+
+.active a:after {
+  content: "";
+  display: block;
+  margin-top: 0.2rem;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--gem-tier-4);
+}
+
+.nav-item a:hover:after {
+  width: 100%;
+}
+
+/* end of navbar */
+
+/*header 2 */
+
+.rightinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.intro {
+  width: 100%;
+}
+
+/*End Of the Header */
+
+/*about Style*/
+#About i {
+  color: var(--gem-tier-4);
+}
+
+.title-Section {
+}
+
+footer{
+    background-color: black;
+}
+.picOfMe {
+  width: 70%;
+  border-radius: 50% 50%;
+  box-shadow: 1px 1px 9px var(--gem-tier-4);
+}
+/*End about Style*/
+
+/* SKILLS Section */
+#Skills {
+  display: grid;
+  place-items: center;
+}
+.skills-bar {
+  width: 60%;
+}
+.skills-bar .bar {
+  margin: 35px 5px;
+}
+.skills-bar .progress-line {
+  width: 100%;
+  height: 0.7em;
+  background-color: #c9c6c6;
+  margin: 10px 0;
+  position: relative;
+  border-radius: 1em;
+}
+.skills-bar .progress-line span {
+  position: absolute;
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+  background-color: #9700d5;
+  border-radius: 1em;
+}
+.skills-bar .progress-line.html span {
+  width: 90%;
+}
+.skills-bar .progress-line.css span {
+  width: 75%;
+}
+.skills-bar .progress-line.javascript span {
+  width: 85%;
+}
+.skills-bar .progress-line.jquey span {
+  width: 65%;
+}
+.skills-bar .progress-line.bootstrap span {
+  width: 80%;
+}
+.skills-bar .progress-line span::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  right: 0;
+  top: -12px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-top-color: #000;
+}
+.skills-bar .progress-line span::before {
+  content: "60%";
+  position: absolute;
+  right: 0;
+  top: -37px;
+  padding: 1px 8px;
+  border-radius: 3px;
+  background-color: #000;
+  color: #fff;
+}
+
+.skills-bar .progress-line.html span::before {
+  content: "90%";
+}
+.skills-bar .progress-line.css span::before {
+  content: "75%";
+}
+.skills-bar .progress-line.javascript span::before {
+  content: "85%";
+}
+.skills-bar .progress-line.jquery span::before {
+  content: "65%";
+}
+.skills-bar .progress-line.bootstrap span::before {
+  content: "80%";
+}
+/*end of skills*/
+/*start of portfolio */
+.potfolio {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.potfolio img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.potfolio:hover img {
+  transform: scale(1.2);
+}
+section#Projects {
+  height: 70vh;
+}
+/*End of portfolio */
+
+/* start contact */
+#Contact .form {
+  width: 60%;
+  margin: auto;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #fff;
+  line-height: 1.7;
+  letter-spacing: 0.8px;
+}
+
+/* media query */
+
+@media (max-width: 992px) {
+  /* header */
+  .full-info {
+    margin-top: 20rem;
+    height: 100%;
+  }
+  .leftimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .rightinfo {
+    align-items: center;
+  }
+  .intro {
+    width: 70%;
+  }
+
+  /* header */
+
+  /* About */
+  #About {
+    margin-top: 10rem;
+    width: 100%;
+  }
+
+  .aboutrightside {
+    line-height: 1.8;
+    text-align: center;
+  }
+  .picOfMe {
+    width: 50%;
+  }
+
+  /* End About */
+
+  /* Skills  */
+  .skills-bar {
+    width: 95%;
+  }
+  /* End Skills  */
+
+  /*Contact */
+  #Contact .form {
+    width: 100%;
+    margin: auto;
+  }
+
+  .section,
+  section#Projects {
+    height: 100%;
+    margin: 5rem 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .title-Section {
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  #About i {
+    font-size: 1.5rem;
+  }
+  #About span {
+    word-wrap: break-word;
+  }
+
+  header {
+    text-align: center;
+  }
+}
